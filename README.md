@@ -7,7 +7,7 @@ Various demos about the Angular Route.
 Some of the features used in the project:
 
 - Guards
-- Resolvers
+- Resolvers (Added some delay to simulate long running operations)
 - Lazy Loading
 - Preloading modules
 - Observables
