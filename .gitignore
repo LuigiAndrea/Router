@@ -1,4 +1,4 @@
-src/app/*.js
+src/app/**/*.js
 main.js
 src/**/*.map
 e2e/*.map
