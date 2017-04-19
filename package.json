@@ -1,5 +1,5 @@
 {
-  "name": "route-ex",
+  "name": "router-angular-demos",
   "version": "1.1.1",
   "scripts": {
     "build": "tsc -p src/",
@@ -9,7 +9,7 @@
     "start": "concurrently \"npm run build:watch\" \"npm run serve\""
   },
   "keywords": [
-    "Route, Angular, Observables, Promises, Resolvers, Guards, Lazy Loading, Preloading"
+    "Router, Angular, Observables, Promises, Resolvers, Guards, Lazy Loading, Preloading"
   ],
   "author": "Luigi Andrea D'Aversa",
   "license": "MIT",
