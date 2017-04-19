@@ -3,6 +3,13 @@
  * Adjust as necessary for your application needs.
  */
 (function (global) {
+
+  let ngLoader = {
+    './*.js': {
+      loader: 'systemjs-angular-loader.js'
+    }
+  };
+
   System.config({
     paths: {
       // paths serve as alias
@@ -31,11 +38,7 @@
       app: {
         main: './main.js',
         defaultExtension: 'js',
-        meta: {
-          './*.js': {
-            loader: 'systemjs-angular-loader.js'
-          }
-        }
+        meta: ngLoader
       },
       rxjs: {
         defaultExtension: 'js'
@@ -45,17 +48,19 @@
         defaultExtension: 'js'
       },
       //barrels
+      'app/core': {
+        main: './index.js',
+        defaultExtension: 'js',
+        meta: ngLoader
+      },
       'app/core/guard-services': {
         main: './index.js',
         defaultExtension: 'js'
       },
       'app/core/name-user-service': {
         main: './index.js',
-        defaultExtension: 'js'
-      },
-      'app/core': {
-        main: './index.js',
-        defaultExtension: 'js'
+        defaultExtension: 'js',
+        meta: ngLoader
       },
       'app/contacts/contacts-resolvers': {
         main: './index.js',

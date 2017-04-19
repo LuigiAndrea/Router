@@ -1,18 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactsService, Contact } from './contacts.service';
+import { ContactsService, Contact } from '../contacts.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'contacts-list',
-  template: `
-    <h2>Contacts</h2> 
-    <ul class="items">
-      <li *ngFor="let contact of contacts" [class.selected]="isSelected(contact)" (click)="onSelect(contact)">
-        <span class="badge">{{contact.id}}</span> {{contact.name}}
-      </li>
-    </ul>
-  `
+  templateUrl: './contacts-list.component.html'
 })
 export class ContactsListComponent implements OnInit {
 

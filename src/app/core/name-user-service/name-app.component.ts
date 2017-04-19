@@ -6,7 +6,7 @@ import { NameAppService } from './name-app.service';
 
 @Component({
   selector: 'app-name',
-  templateUrl: 'app/core/name-user-service/name-app.component.html',
+  templateUrl: './name-app.component.html',
 })
 export class NameComponent {
   @Input() userName = '';

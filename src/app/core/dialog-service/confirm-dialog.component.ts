@@ -4,7 +4,7 @@ import {MdDialogRef} from '@angular/material'
 
 @Component({
     selector: 'dialog-result',
-    templateUrl: 'app/core/dialog-service/confirm-dialog.component.html'
+    templateUrl: './confirm-dialog.component.html'
 })
 export class ConfirmDialogComponent {
     message:string;
