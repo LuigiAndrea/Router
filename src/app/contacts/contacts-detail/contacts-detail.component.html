@@ -1,0 +1,14 @@
+<h2>CONTACT</h2>
+<div *ngIf="contact">
+    <h3>{{contact.name}}</h3>
+    <div>
+        <label>Id: </label>{{contact.id}}</div>
+    <div>
+        <label>Name: </label>
+        <input [(ngModel)]="contact.name" placeholder="contact name" />
+    </div>
+    <p>
+        <button (click)="goToContactList()">Back</button>
+    </p>
+</div>
+<h2 class='error' *ngIf="!contact">No contact found with the ID provided</h2>

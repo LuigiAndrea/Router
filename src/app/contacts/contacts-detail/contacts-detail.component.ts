@@ -1,27 +1,12 @@
 import { Component, OnInit, HostBinding, trigger, transition, animate, style, state } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { ContactsService, Contact } from './contacts.service';
+import { ContactsService, Contact } from '../contacts.service';
 
 import 'rxjs/add/operator/map';
 
 @Component({
     selector: 'contacts-detail',
-    template: `
-    <h2>CONTACT</h2>
-    <div *ngIf="contact">
-    <h3>{{contact.name}}</h3>
-    <div>
-        <label>Id: </label>{{contact.id}}</div>
-    <div>
-        <label>Name: </label>
-        <input [(ngModel)]="contact.name" placeholder="contact name"/>
-    </div>
-    <p>
-        <button (click)="goToContactList()">Back</button>
-    </p>
-    </div>
-    <h2 class='error' *ngIf="!contact">No contact found with the ID provided</h2>
-    `,
+    templateUrl: './contacts-detail.component.html',
     animations: [
         trigger('routeAnimation', [
             state('*', style({ opacity: 1, transform: 'translateX(0)' })),

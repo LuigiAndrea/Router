@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AdminDashboardComponent } from './admin-dashboard.component';
-import { ManageContactsComponent } from './manage-contacts.component';
-import { ManageTeamComponent } from './manage-team.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { ManageContactsComponent } from './manage-contacts/manage-contacts.component';
+import { ManageTeamComponent } from './manage-team/manage-team.component';
 import { AdminComponent } from './admin.component';
 
 import { AuthGuard } from '../core/guard-services';

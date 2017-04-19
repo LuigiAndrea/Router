@@ -2,7 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
-import { ContactsDetailComponent } from './contacts-detail.component';
+import { ContactsDetailComponent } from './contacts-detail/contacts-detail.component';
 import { ContactListResolver, ContactDetailResolver } from './contacts-resolvers';
 
 const contacts = [

@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'team-list-child-component',
-  template: `
-    <h2>I am the Child Component</h2>
-  `
+  templateUrl:'./team-list-children.component.html'
 })
 export class TeamListChildrenComponent { }

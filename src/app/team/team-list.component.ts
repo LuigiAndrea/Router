@@ -7,17 +7,7 @@ import { DialogService, TeamService } from '../core';
 
 @Component({
   selector: 'team-list-component',
-  template: `
-    <h1>I am {{teamComponentName}} Component</h1>
-    <router-outlet></router-outlet>
-    <router-outlet name='aux'></router-outlet>
-     <div>
-        <label>Name Team: </label>
-        <input [(ngModel)]="beforeEdit" placeholder="team name"/>       
-        <button (click)="changeName()">Change Name</button>
-        <button (click)="cancel()">Cancel</button>
-    </div> 
-  `
+  templateUrl: './team-list.component.html' 
 })
 export class TeamListComponent implements OnInit {
   teamComponentName: string;

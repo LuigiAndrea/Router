@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'contact-not-found',
-  template: `
-    <h1>The url is not valid!</h1>
-  `
+  templateUrl:'./url-not-found.component.html' 
 })
 export class UrlNotFound { }

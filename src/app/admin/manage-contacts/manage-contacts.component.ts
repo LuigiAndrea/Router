@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 @Component({
-  template:  `
-    <p>Manage here your contacts</p>
-  `
+  templateUrl:'./manage-contacts.component.html'
 })
 export class ManageContactsComponent { }

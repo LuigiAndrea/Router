@@ -1,14 +1,4 @@
-/**
- * System configuration for Angular samples
- * Adjust as necessary for your application needs.
- */
 (function (global) {
-
-  let ngLoader = {
-    './*.js': {
-      loader: 'systemjs-angular-loader.js'
-    }
-  };
 
   System.config({
     paths: {
@@ -17,8 +7,6 @@
     },
     // map tells the System loader where to look for things
     map: {
-      // our app is within the app folder
-      app: 'app',
       // angular bundles
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
@@ -28,44 +16,20 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+      '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
       // other libraries
       'rxjs': 'npm:rxjs',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
-      '@angular/material': 'npm:@angular/material/bundles/material.umd.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
-      app: {
-        main: './main.js',
-        defaultExtension: 'js',
-        meta: ngLoader
-      },
       rxjs: {
-        defaultExtension: 'js'
-      },
-      'angular2-in-memory-web-api': {
-        main: './index.js',
-        defaultExtension: 'js'
-      },
-      //barrels
-      'app/core': {
-        main: './index.js',
-        defaultExtension: 'js',
-        meta: ngLoader
-      },
-      'app/core/guard-services': {
-        main: './index.js',
-        defaultExtension: 'js'
-      },
-      'app/core/name-user-service': {
-        main: './index.js',
-        defaultExtension: 'js',
-        meta: ngLoader
-      },
-      'app/contacts/contacts-resolvers': {
-        main: './index.js',
         defaultExtension: 'js'
       }
     }
   });
+
+  System.import('./systemjs.config.extras.js')
+    .catch(function (err) { console.error(err); });
+ 
 })(this);

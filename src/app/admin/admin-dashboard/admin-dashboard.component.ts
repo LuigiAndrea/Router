@@ -4,13 +4,7 @@ import { Observable }         from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 @Component({
-  template:  `
-    <p>Dashboard</p>
-
-    <p>Session ID: {{ sessionId | async }}</p>
-    <a id="anchor"></a>
-    <p>Token: {{ token | async }}</p>
-  `
+  templateUrl:'./admin-dashboard.component.html'
 })
 export class AdminDashboardComponent implements OnInit {
   sessionId: Observable<string>;

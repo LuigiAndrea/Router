@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TeamListDefComponent } from './team-list-def.component';
 import { TeamListComponent } from './team-list.component';
-import { TeamListChildrenComponent } from './team-list-children.component'
+import { TeamListDefComponent } from './team-list-default/team-list-default.component';
+import { TeamListChildrenComponent } from './team-list-children/team-list-children.component'
 
 import { CanDeactivateGuard } from '../core/guard-services';
 
