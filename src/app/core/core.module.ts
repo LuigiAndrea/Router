@@ -5,7 +5,7 @@ import { MaterialModule } from '@angular/material';
 
 import { NameAppService, NameConfig, NameComponent } from './name-user-service';
 import { AuthGuard,CanDeactivateGuard } from './guard-services';
-import {UrlNotFound,TeamService,DialogService,AuthService,ConfirmDialogComponent} from './'
+import {UrlNotFound,TeamService,DialogService,AuthService,ConfirmDialogComponent, LoginService} from './'
 
 //modules
 import { ContactsModule } from '../contacts/contacts.module';
@@ -17,7 +17,8 @@ import {LoginModule} from '../login/login.module';
   exports: [NameComponent],
   providers: [
     NameAppService, TeamService, DialogService,
-    AuthService, AuthGuard, CanDeactivateGuard
+    AuthService, AuthGuard, CanDeactivateGuard,
+    LoginService
   ],
   entryComponents:[ConfirmDialogComponent]
 })

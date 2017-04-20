@@ -1,8 +1,8 @@
-Angular Route
+Angular Router
 ===
 
-#### Route Demos
-Various demos about the Angular Route.
+#### Router Demos
+Various demos about the Angular Router.
 
 Some of the features used in the project:
 

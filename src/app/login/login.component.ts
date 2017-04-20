@@ -1,19 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 
-import { AuthService } from '../core';
+import { AuthService, LoginService } from '../core';
+import { typeAuth } from '../core';
 
 @Component({
-  templateUrl:'./login.component.html'
+  templateUrl: './login.component.html'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   message: string;
-  constructor(public authService: AuthService, public router: Router) {
+  constructor(public authService: AuthService, public router: Router, public loginService: LoginService) {
+  }
+
+  ngOnInit() {
     this.setMessage();
   }
+
   setMessage() {
     this.message = 'Logged ' + (this.authService.isLoggedIn ? 'in' : 'out');
   }
+
   login() {
     this.message = 'Trying to log in ...';
     this.authService.login().subscribe(() => {
@@ -31,10 +37,13 @@ export class LoginComponent {
 
         this.router.navigate([redirect], navigationExtras);
       }
-    });
+    },(e)=>console.error(e), ()=>this.loginService.announceAuth(typeAuth.logout));
+
   }
+
   logout() {
     this.authService.logout();
     this.setMessage();
+    this.loginService.announceAuth(typeAuth.login);
   }
 }
